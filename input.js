@@ -1,5 +1,4 @@
 // input.js manages all client inputs to communicate with server 
-
 const connect = require('./client');
 const conn = require('./client');
 
