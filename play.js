@@ -1,21 +1,10 @@
-const net = require('net');
+// Our play.js file is handling all the logic for setting up and handling user input
+const connect = require("./client");
+const setupInput = require("./input");
 
-// establishes a connection with the game server
-const connect = function () {
-  const conn = net.createConnection({
-    host: "135.23.222.131",
-    port: 50542
-  });
-
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
-
-  conn.on("data", ()=>{
-    console.log("Data that came in.")
-  });
-  
-  return conn;
-};
-
+// console logs while client.js connects
 console.log("Connecting ...");
-connect();
+// server kicked out my snake for idling
+
+//connect() returns conn
+setupInput(connect());
